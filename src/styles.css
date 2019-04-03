@@ -1,0 +1,61 @@
+/* Add application styles & imports to this file! */
+
+
+/* Add application styles & imports to this file! */
+a{
+  text-decoration: none;
+}
+nav.navbar.navbar-default{
+  background: #007bff;
+}
+ul.nav.navbar-nav {
+    padding: 15px;
+    background: #007bff;
+    width: 100%;
+    display: flex;
+    flex-direction: initial;
+}
+ul.nav.navbar-nav li a{
+    display: inline-block;
+    width: 100%;
+    background: #fff;
+    margin: 10px;
+    text-align: center;
+    border: 1px solid #007bff;
+    word-break: break-all;
+}
+ul.nav.navbar-nav a {
+    color: #007bff;
+        display: block;
+        padding: 25px;
+}
+p.dashboard {
+    text-align: center;
+    font-size: 25px;
+}
+footer {
+    text-align: center;
+    width: 100%;
+    bottom: 0;
+    color: #fff;
+    background: #007bff;
+    padding: 10px 0 0; 
+}
+ul.nav.navbar-nav a:hover {
+    text-decoration: none;
+}
+input.form-control {
+    width: 100%;
+    margin: auto;
+    background: transparent !important;
+    border: 1px solid #00000021 !important;
+    min-height: 50px;
+}
+.error_massage {
+    text-align: center;
+    font-size: 19px;
+    background: rgba(0, 123, 255,0.5);
+    margin: 5px;
+    padding: 5px;
+    color:#fff;
+}

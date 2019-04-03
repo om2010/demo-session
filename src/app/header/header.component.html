@@ -1,0 +1,9 @@
+
+<nav class="navbar navbar-default">
+  <ul class="nav navbar-nav">
+      <li><a routerLink="/signup" *ngIf="!auth.check_user_login()">sign up</a></li>
+       <li><a routerLink="/signin" *ngIf="!auth.check_user_login()">sign in</a></li>
+       <li><a routerLink="/dashboard" *ngIf="auth.check_user_login()">dashboard</a></li>
+       <li><a (click)="auth.logout()" *ngIf="auth.check_user_login()">Logout</a></li>
+    </ul>
+</nav>

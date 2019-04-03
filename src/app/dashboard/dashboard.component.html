@@ -1,0 +1,25 @@
+<p style="text-align:center;" class="error_massage">
+Welcome To dashboard
+</p>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>title</th>
+      <th>slug</th>
+      <th>description</th>
+      <th>image</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of users">
+      <td>{{ user.id }}</td>
+      <td>{{ user.title }}</td>
+      <td>{{ user.slug }}</td>
+      <td>{{ user.description }}</td>
+      <td><img src="{{ user.image }}"/></td>
+    </tr>
+  </tbody>
+</table>

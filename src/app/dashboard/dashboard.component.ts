@@ -39,19 +39,19 @@ export class DashboardComponent implements OnInit {
 
 
 
-this.route.queryParams.subscribe(params => {
-            this.sid = params["sid"];
-            let headers = new Headers({ "authorization": "Bearer " + params["sid"] });
-            let options = new RequestOptions({ headers: headers });
-            this.http.get(" https://angular.cppatidar.com/angular/webservice/webservice.php", options)
-                .map(result => result.json())
-                .subscribe(result => {
-                    this.entries = result;
-                });
-        });
-    }
- public create() {
-        this.router.navigate(["/blog"], { "queryParams": { "sid": this.sid } });
-    }
+ this.route.queryParams.subscribe(params => {
+        this.sid = params["sid"];
+        let headers = new Headers({ "authorization": "Bearer " + params["sid"] });
+        let options = new RequestOptions({ headers: headers });
+        this.http.get("http://localhost:3000/blogs", options)
+            .map(result => result.json())
+            .subscribe(result => {
+                this.entries = result;
+            });
+    });
+}
+public create() {
+    this.router.navigate(["/blog"], { "queryParams": { "sid": this.sid } });
+}
 }
 

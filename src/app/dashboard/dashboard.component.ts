@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../auth.service';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from "@angular/router";
 import { DatadashboardService } from '../datadashboard.service';
 import { User } from '../User';
+
 
 @Component({
   selector: 'app-dashboard',
@@ -27,3 +28,4 @@ export class DashboardComponent implements OnInit {
   }
 
 }
+

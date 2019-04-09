@@ -2,8 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../auth.service';
 import { Router, ActivatedRoute } from "@angular/router";
 import { DatadashboardService } from '../datadashboard.service';
-import { Http, Headers, RequestOptions } from "@angular/http";
-import { User } from '../User';
+//import { Http, Headers, RequestOptions } from "@angular/http";
+import { HttpClient , HttpParams,HttpHeaders } from '@angular/common/http';
+//import { User } from '../User';
 import "rxjs/Rx";
 
 
@@ -16,9 +17,9 @@ import "rxjs/Rx";
 export class DashboardComponent implements OnInit {
   private sid: string;
     public entries: Array<any>;
- users: User[];
+ users: any;
 
-  constructor(private http: Http,private auth : AuthService,private router: Router, private datadashboardService: DatadashboardService, private route: ActivatedRoute) {
+  constructor(private http: HttpClient,private auth : AuthService,private router: Router, private datadashboardService: DatadashboardService, private route: ActivatedRoute) {
     this.entries = [];
    }
   

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { RouterModule, Route, Router } from '@angular/router';
+import { RouterModule, Router } from '@angular/router';
 import { AuthService } from '../auth.service';
 
 @Component({
@@ -36,7 +36,6 @@ ngOnInit() {
                 this.isLogin = true;
                 this.error_message=responseData.message;
                 this.router.navigate(['/dashboard']);
-                alert("in");
                }else{
                    console.log('out');
                   this.error_message=responseData.message;

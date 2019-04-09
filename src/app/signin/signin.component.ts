@@ -36,6 +36,7 @@ ngOnInit() {
                 this.isLogin = true;
                 this.error_message=responseData.message;
                 this.router.navigate(['/dashboard']);
+                alert("in");
                }else{
                    console.log('out');
                   this.error_message=responseData.message;

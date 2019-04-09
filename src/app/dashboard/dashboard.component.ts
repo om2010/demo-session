@@ -24,6 +24,7 @@ export class DashboardComponent implements OnInit {
   
   ngOnInit() {
      if(!this.auth.check_user_login()){
+       alert("hi");
         this.router.navigate(['/signin']);
      }
      
@@ -39,19 +40,19 @@ export class DashboardComponent implements OnInit {
 
 
 
- this.route.queryParams.subscribe(params => {
-        this.sid = params["sid"];
-        let headers = new Headers({ "authorization": "Bearer " + params["sid"] });
-        let options = new RequestOptions({ headers: headers });
-        this.http.get("http://localhost:3000/blogs", options)
-            .map(result => result.json())
-            .subscribe(result => {
-                this.entries = result;
-            });
-    });
+//  this.route.queryParams.subscribe(params => {
+//         this.sid = params["sid"];
+//         let headers = new Headers({ "authorization": "Bearer " + params["sid"] });
+//         let options = new RequestOptions({ headers: headers });
+//         this.http.get("http://localhost:3000/blogs", options)
+//             .map(result => result.json())
+//             .subscribe(result => {
+//                 this.entries = result;
+//             });
+//     });
 }
-public create() {
-    this.router.navigate(["/blog"], { "queryParams": { "sid": this.sid } });
-}
+// public create() {
+//     this.router.navigate(["/blog"], { "queryParams": { "sid": this.sid } });
+// }
 }
 

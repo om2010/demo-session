@@ -2,9 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../auth.service';
 import { Router, ActivatedRoute } from "@angular/router";
 import { DatadashboardService } from '../datadashboard.service';
-//import { Http, Headers, RequestOptions } from "@angular/http";
 import { HttpClient , HttpParams,HttpHeaders } from '@angular/common/http';
-//import { User } from '../User';
 import "rxjs/Rx";
 
 

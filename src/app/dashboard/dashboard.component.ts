@@ -22,7 +22,7 @@ export class DashboardComponent implements OnInit {
    }
   
   sendslug(getslug){
-  this.router.navigate([]);
+  this.router.navigate(['/getslug']);
   console.log(getslug)
   }
   ngOnInit() {

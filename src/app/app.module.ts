@@ -12,7 +12,6 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { AuthService } from './auth.service';
 import { HttpClientModule } from '@angular/common/http';
 import { DatadashboardService } from './datadashboard.service';
-import { SingleuserComponent } from './singleuser/singleuser.component';
 @NgModule({
   imports:      [ BrowserModule,HttpClientModule ,ReactiveFormsModule, FormsModule, RouterModule.forRoot([
     { path: '', redirectTo: '', pathMatch: 'full' },
@@ -29,7 +28,7 @@ import { SingleuserComponent } from './singleuser/singleuser.component';
         component: DashboardComponent
       },
   ]) ],
-  declarations: [ AppComponent, HelloComponent, SignupComponent, HeaderComponent, SigninComponent, DashboardComponent, SingleuserComponent],
+  declarations: [ AppComponent, HelloComponent, SignupComponent, HeaderComponent, SigninComponent, DashboardComponent],
   providers: [AuthService, DatadashboardService],
   bootstrap:    [ AppComponent ]
 })

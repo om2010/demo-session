@@ -20,7 +20,7 @@ Welcome To dashboard
       <td>{{ user.slug }}</td>
       <td>{{ user.description }}</td>
       <td><img src="{{ user.image }}"/></td>
-       <td><button type="button" (click)="create()">Click...</button></td>
+       <td><a (click)="sendslug(user.slug)">Click...</a></td>
     </tr>
   </tbody>
 </table>

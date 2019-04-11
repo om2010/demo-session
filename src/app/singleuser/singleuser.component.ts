@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { DatadashboardService } from '../datadashboard.service';
+
 
 @Component({
   selector: 'app-singleuser',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SingleuserComponent implements OnInit {
 
-  constructor() { }
+  signledata;
+
+  constructor(private datadashboardService:DatadashboardService ) { }
 
   ngOnInit() {
+    this.datadashboardService.getsingleUsers()
+      .subscribe((responseData) => {
+        console.log(responseData)
+        this.signledata = responseData.data;
+        });
   }
 
 }

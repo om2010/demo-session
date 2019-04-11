@@ -10,5 +10,10 @@ export class DatadashboardService {
     const  pushData =  new  HttpParams().set('method', "getFeeds"); 
       return this.http.post<any>(this.url,pushData);
         }
+    getsingleUsers() {
+    const  pushData =  new  HttpParams().set('method', "getFeedBySlug").set('data',JSON.stringify([{"slug":'Lorem-ipsum-variants-and-technical-information' }])); 
+      return this.http.post<any>(this.url,pushData);
+        }
 }
 
+ 

@@ -12,7 +12,7 @@ export class DatadashboardService {
         }
 
     getsingleUsers(getslug) {
-      const  pushData =  new  HttpParams().set('method', "getFeedBySlug").set('data',JSON.stringify([{"slug":'getslug' }])); 
+      const  pushData =  new  HttpParams().set('method', "getFeedBySlug").set('data',JSON.stringify([{"slug":getslug }])); 
         return this.http.post<any>(this.url,pushData);
           }
 }

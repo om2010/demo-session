@@ -20,8 +20,8 @@ activeSlug;
     let sluger = this.router.snapshot.params['slug'];
     this.activeSlug = sluger;
     this.datadashboardService.getsingleUsers(this.activeSlug).subscribe(responseData => {
-        let data = responseData;
-        console.log(data);
+        let data = responseData.data;
+        console.log(data.slug);
         this.xyz = data;
         })
   }

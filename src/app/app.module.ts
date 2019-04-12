@@ -24,7 +24,7 @@ import { SingleuserComponent } from './singleuser/singleuser.component';
         component: SignupComponent
       },
       {
-        path: 'signle',
+        path: 'single',
         component: SingleuserComponent
       },
       {

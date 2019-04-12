@@ -7,18 +7,19 @@ import { DatadashboardService } from '../datadashboard.service';
   templateUrl: './singleuser.component.html',
   styleUrls: ['./singleuser.component.css']
 })
+
 export class SingleuserComponent implements OnInit {
 
-  signledata;
+  xyz:any;
 
   constructor(private datadashboardService:DatadashboardService ) { }
 
   ngOnInit() {
-    this.datadashboardService.getsingleUsers()
-      .subscribe((responseData) => {
-        console.log(responseData)
-        this.signledata = responseData.data;
-        });
+    this.datadashboardService.getsingleUsers().subscribe(responseData => {
+        let data = responseData.data;
+        console.log(data);
+        this.xyz = data;
+        })
   }
 
 }

@@ -22,9 +22,9 @@ export class DashboardComponent implements OnInit {
    }
   
   sendslug(getslug){
-  this.router.navigate(['/getslug']);
-  console.log(getslug)
+    this.router.navigate(['/single',getslug]);
   }
+
   ngOnInit() {
      if(!this.auth.check_user_login()){
        alert("hi");

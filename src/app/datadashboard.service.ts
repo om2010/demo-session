@@ -11,8 +11,8 @@ export class DatadashboardService {
       return this.http.post<any>(this.url,pushData);
         }
 
-    getsingleUsers() {
-      const  pushData =  new  HttpParams().set('method', "getFeedBySlug").set('data',JSON.stringify([{"slug":'Lorem-ipsum-variants-and-technical-information' }])); 
+    getsingleUsers(getslug) {
+      const  pushData =  new  HttpParams().set('method', "getFeedBySlug").set('data',JSON.stringify([{"slug":'getslug' }])); 
         return this.http.post<any>(this.url,pushData);
           }
 }

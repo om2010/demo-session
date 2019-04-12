@@ -18,13 +18,12 @@ import { SingleuserComponent } from './singleuser/singleuser.component';
 
 @NgModule({
   imports:      [ BrowserModule,HttpClientModule ,ReactiveFormsModule, FormsModule, RouterModule.forRoot([
-    { path: '', redirectTo: '', pathMatch: 'full' },
     {
         path: 'signup',
         component: SignupComponent
       },
       {
-        path: 'single',
+        path: 'single/:slug',
         component: SingleuserComponent
       },
       {
@@ -34,7 +33,7 @@ import { SingleuserComponent } from './singleuser/singleuser.component';
       {
         path: 'dashboard',
         component: DashboardComponent
-      },
+      }
   ]) ],
   declarations: [ SingleuserComponent,AppComponent, HelloComponent, SignupComponent, HeaderComponent, SigninComponent, DashboardComponent],
   providers: [AuthService, DatadashboardService],

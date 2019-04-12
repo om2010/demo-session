@@ -17,10 +17,10 @@ activeSlug;
   constructor(private datadashboardService:DatadashboardService , private router:ActivatedRoute ) { }
 
   ngOnInit() {
-    let slug = this.router.snapshot.params['slug'];
-    this.activeSlug = slug;
+    let sluger = this.router.snapshot.params['slug'];
+    this.activeSlug = sluger;
     this.datadashboardService.getsingleUsers(this.activeSlug).subscribe(responseData => {
-        let data = responseData.data;
+        let data = responseData;
         console.log(data);
         this.xyz = data;
         })
